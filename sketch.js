@@ -1,12 +1,11 @@
 function setup() {
-  createCanvas(windowWidth, windowHeight);
-  background(170, 45, 200);
+  createCanvas(800, 784);
+  background(236, 240, 234);
+
+  let r = color(238, 36, 0);
+
+  fill(r);
+  noStroke();
+  rect(1, 1, 369, 321);
 }
 
-function draw() {
-  circle(mouseX, mouseY, 60);
-}
-
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-}
