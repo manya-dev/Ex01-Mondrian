@@ -1,4 +1,4 @@
-var c1, c2, r, b1, b2;
+var c1, c2, r, b1, b2, y1, y2;
 var LineLayer;
 
 function setup() {
@@ -13,6 +13,9 @@ function setup() {
   b1 = color(44, 52, 134);
   b2 = color(25, 19, 99);
 
+  y1 = color(253, 219, 0);
+  y2 = color(234, 189, 0);
+
   r = color(238, 36, 0);
 
 
@@ -26,9 +29,11 @@ function draw() {
   noStroke();
   rect(0,0,282,244);
   //yellow
-  fill(254,219,0);
-  noStroke();
-  rect(0,394,57,206);
+  //fill(254,219,0);
+  //noStroke();
+  //rect(0,394,57,206);
+  drawGradientRect(0,394,57,206, y1, y2);
+
   //blue
   drawGradientSquare(284, 396, 180, b1, b2);
 
@@ -95,3 +100,15 @@ function drawGradientSquare(x, y, size, c1, c2) {
   }
 }
 
+function drawGradientRect(x, y, w, h, c1, c2) {
+  noStroke();
+  fill(c1);
+  rect(x, y, w, h);
+
+  for (let row = 0; row < h; row++) {
+  const amount = map(row, 0, h, 0, 1);
+  stroke(lerpColor(c1, c2, amount));
+  line(x, y + row, x + w, y + row);
+
+  }
+}
