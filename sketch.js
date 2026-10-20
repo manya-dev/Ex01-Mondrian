@@ -35,7 +35,7 @@ function draw() {
   //blue
   drawGradientSquare(379, 528, 240, b1, b2);
 
-  drawTexture(13333);
+  drawTexture(15000);
 
   //lines on the layer
   LineLayer.clear();
