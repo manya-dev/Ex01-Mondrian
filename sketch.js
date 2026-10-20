@@ -3,7 +3,7 @@ var c1, c2, r, b1, b2, y1, y2;
 var LineLayer;
 
 function setup() {
-  createCanvas(612, 600);
+  createCanvas(816, 800);
   LineLayer = createGraphics(width, height);
 
   // colors for a gradient background
@@ -25,40 +25,40 @@ function draw() {
   //red
   fill(r);
   noStroke();
-  rect(0,0,282,244);
+  rect(0, 0, 376, 325);
        //yellow
   //fill(254,219,0);
   //noStroke();
   //rect(0,394,57,206);
-  drawGradientRect(0,394,57,206, y1, y2);
+  drawGradientRect(0, 525, 76, 275, y1, y2);
 
   //blue
-  drawGradientSquare(284, 396, 180, b1, b2);
+  drawGradientSquare(379, 528, 240, b1, b2);
 
-  drawTexture(10000);
+  drawTexture(13333);
 
   //lines on the layer
   LineLayer.clear();
   LineLayer.stroke(0);
-  LineLayer.strokeWeight(9);
-  LineLayer.line(282, 0, 282, 600);
+  LineLayer.strokeWeight(12);
+  LineLayer.line(376, 0, 376, 800);
   //
-  LineLayer.strokeWeight(14);
-  LineLayer.line(0,244,612,244);
+  LineLayer.strokeWeight(19);
+  LineLayer.line(0, 325, 816, 325);
   //
-  LineLayer.line(0,390,612,390);
+  LineLayer.line(0, 520, 816, 520);
   //
-  LineLayer.strokeWeight(8);
-  LineLayer.line(57,390,57,612);
+  LineLayer.strokeWeight(11);
+  LineLayer.line(76, 520, 76, 816);
 
-  LineLayer.strokeWeight(8);
-  LineLayer.line(282,572,463,572);
+  LineLayer.strokeWeight(11);
+  LineLayer.line(376, 763, 617, 763);
 
-  LineLayer.strokeWeight(8);
-  LineLayer.line(465,398,465,600);
+  LineLayer.strokeWeight(11);
+  LineLayer.line(620, 531, 620, 800);
 
   //FILTER
-  LineLayer.filter(BLUR, 1.1, false);
+  LineLayer.filter(BLUR, 1.5, false);
   image(LineLayer, 0, 0);
 //
   noLoop();
