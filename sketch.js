@@ -1,26 +1,24 @@
 var c1, c2, r, b1, b2, y1, y2;
+//layer for lines
 var LineLayer;
 
 function setup() {
   createCanvas(612, 600);
   LineLayer = createGraphics(width, height);
 
-  // colors fro a gradient background
+  // colors for a gradient background
   c1 = color(239, 243, 238);
   c2 = color(193, 186, 185);
+  //bg gradient
   setGradient(c1, c2);
-  // colors fro a gradient blue square
+  // colors for a gradient blue square
   b1 = color(44, 52, 134);
   b2 = color(25, 19, 99);
-
+//yellow gradient
   y1 = color(253, 219, 0);
   y2 = color(234, 189, 0);
-
+//test red color
   r = color(238, 36, 0);
-
-
-
-
 }
 
 function draw() {
@@ -28,7 +26,7 @@ function draw() {
   fill(r);
   noStroke();
   rect(0,0,282,244);
-  //yellow
+       //yellow
   //fill(254,219,0);
   //noStroke();
   //rect(0,394,57,206);
@@ -37,7 +35,7 @@ function draw() {
   //blue
   drawGradientSquare(284, 396, 180, b1, b2);
 
-  drawTexture(15000);
+  drawTexture(10000);
 
   //lines on the layer
   LineLayer.clear();
@@ -59,7 +57,7 @@ function draw() {
   LineLayer.strokeWeight(8);
   LineLayer.line(465,398,465,600);
 
-  //filter
+  //FILTER
   LineLayer.filter(BLUR, 1.1, false);
   image(LineLayer, 0, 0);
 //
@@ -78,7 +76,7 @@ function drawTexture(density) {
   }
 }
 
-//GRADIENT
+//GRADIENTS
 function setGradient(c1, c2) {
   for (let y = 0; y < height; y++) {
     const amount = map(y, 0, height, 0, 1);
