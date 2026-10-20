@@ -1,13 +1,8 @@
 # Memória Descritiva
 
-My process of recreating the painting:
-1. analysing the original, defying main parts. the painting has 4 main elements, 3 rectangles (red, yellow and blue) and black lines with different width.
-2. adding basic shapes
-i used a web tool [Image Coordinates Finder](https://imageonline.io/find-coordinates-of-image/) to get exact coordinates on the image of the painting (i resized the image to the same pixels, 600x612px). and one by one i added each shape. i used web tool [ImageColorPicker.com](https://imagecolorpicker.com/) to pick colors.
-3. adding gradients and texture
-i decided to use gradients on the background and the blue and yellow rectangles, to replicate the uneven shift in colors on the original painting. i created functions for each gradient. 
-i also added a noise texture on the background to imitate the texture of the canvas. i noticed that if i comment out line noLoop(), it creates an inetersting effect that covers image with dots. i use this line to stop this animation and only adding one layer of noise.
-4. filter blur on lines
-lastly, i wanted to add a littble bit og blur to the lines, to make them appear less digital and more like a line painted with paint. at first it was hard to understand how to apply a blur filter only to lines, but then i found out that the filters are used only on the entire canvas or on layers. so i out all black lines on one layer and applied a filter. 
-
-in the end i was able to recreate a painting of Mondrian.
+O meu processo de recriação da pintura:
+1. Análise do original, identificando as partes principais. A pintura tem 4 elementos principais: 3 retângulos (vermelho, amarelo e azul) e linhas pretas com larguras diferentes.
+2. Adicionar formas básicas. Utilizei uma ferramenta online [Image Coordinates Finder](https://imageonline.io/find-coordinates-of-image/) para obter as coordenadas exatas na imagem da pintura. E, uma a uma, fui adicionando cada forma. Utilizei a ferramenta web [ImageColorPicker.com](https://imagecolorpicker.com/) para selecionar as cores.
+3. Adição de gradientes e textura. Decidi utilizar gradientes no fundo e nos retângulos azul e amarelo, para reproduzir a variação irregular das cores na pintura original. Criei funções para cada gradiente.
+Também adicionei uma textura de ruído ao fundo para imitar a textura da tela. Reparei que, se eliminar a linha `noLoop()`, cria-se um efeito interessante que cobre a imagem com pontos. Utilizo esta linha para interromper esta animação e adicionar apenas uma camada de ruído.
+4. Filtro de desfoque nas linhas. Por último, quis adicionar um pouco de desfoque às linhas, para que parecessem menos digitais/nítidas e mais semelhantes a uma linha pintada com tinta. No início, foi difícil perceber como aplicar um filtro de desfoque apenas às linhas, mas depois descobri que os filtros só são aplicados à tela inteira ou a camadas. Por isso, coloquei todas as linhas pretas numa camada e apliquei um filtro.
